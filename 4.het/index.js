@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 initDatabase((err, { db, todoModel }) => {
     if (err) {
-        return console.err(err);
+        return console.error(err);
     }
 
     addRoutes(app, db, todoModel);
