@@ -1,0 +1,14 @@
+Todo alkalmazás 4 heti házi
+
+Erőforrás:
+	Todo
+	-id    (generált)
+	-string: todo
+
+- GET /todos		-összes todo lekérdezése
+- GET /todo/:id		-adott todo lekérdezése
+- POST /todo		-új todo létrehozása
+	-string: todo leírása
+- PATCH /todo		-todo leírásának módosítása
+	-string: todo új leírasa
+- DELETE /todo/:id	-adott todo törlése	
