@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <h2>Stored number: <span id="numberDisplay">0</span></h2>
+    <button id="button1">Increase number stored in session</button>
+    <button id="button2">generate new session</button>
+
+    <script>
+        document.getElementById('button1').onclick = function () {
+            fetch('/increase', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById('numberDisplay').textContent = data.count;
+                });
+        };
+
+        document.getElementById('button2').onclick = function () {
+            fetch('/new-session', { method: 'POST' })
+                .then(() => location.reload());
+        };
+    </script>
+</body>
+
+</html>
